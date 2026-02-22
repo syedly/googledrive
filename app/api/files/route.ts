@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createFileMetadata, fetchFilesByParent } from '../../../lib/fileService'
+import { createFileMetadata, fetchFilesByParent, fetchStarredFiles, fetchTrashedFiles, fetchRecentFiles } from '../../../lib/fileService'
 
 function parseCookie(cookie = '') {
   return Object.fromEntries(cookie.split(';').map(c => c.trim().split('=')))
